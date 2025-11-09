@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEVAM - The Power for Welding</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-ieCDL+8a1a2b3c4f5d6e7f8a9b0c1d2e3f4g5h6i7j8k9l0m1n2o3p4q5r6s7t8u9v0w1x2y3z4="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #005B96;
+            /* Devam Blue */
+            --secondary: #FF6B35;
+            /* Devam Orange */
+            --dark: #333333;
+            /* Dark Gray for text */
+            --light: #F5F5F5;
+            /* Light Gray for backgrounds */
+            --white: #FFFFFF;
+        }
+
+        /* Box sizing for all elements */
+        *,
+        ::before,
+        ::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Use 'Open Sans' as the default font */
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+            /* Improve readability */
+        }
+
+        /* Headings use 'Montserrat' */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            /* Improve heading readability */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            /* Add some horizontal padding */
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            /* Center text for block-level buttons */
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus {
+            background-color: transparent;
+            color: var(--secondary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 0;
+            /* Adjust padding */
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            /* Adjust logo size */
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: transparent;
+            /* Make nav background transparent as it's inside header */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            position: relative;
+        }
+
+        nav>ul>li {
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: var(--dark);
+            /* Navigation links color */
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            font-weight: 600;
+        }
+
+        nav ul li:hover>a,
+        nav ul li a.active,
+        nav ul li a:focus {
+            background-color: var(--primary);
+            color: var(--white);
+            /* Active/hover state for primary nav links */
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: var(--primary);
+            /* Submenu background color */
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            min-width: 250px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+        }
+
+        nav ul li.has-dropdown:hover>ul,
+        nav ul li.has-dropdown a:focus+.dropdown-menu,
+        /* For keyboard accessibility */
+        nav ul li ul li.has-dropdown:hover>ul,
+        nav ul li ul li.has-dropdown a:focus+.dropdown-menu {
+            display: block;
+        }
+
+        /* Added for JavaScript toggling */
+        nav ul li ul.show-dropdown {
+            display: block;
+        }
+
+
+        nav ul li ul li {
+            position: relative;
+        }
+
+        nav ul li ul li ul {
+            left: 100%;
+            top: 0;
+            border-left: 2px solid var(--secondary);
+            /* Visual cue for nested submenus */
+        }
+
+        nav ul li ul li a {
+            padding: 10px 20px;
+            white-space: nowrap;
+            color: var(--white);
+            /* Submenu link color */
+        }
+
+        nav ul li ul li a:hover,
+        nav ul li ul li a:focus {
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Lighter hover for submenu */
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 28px;
+            /* Slightly larger icon */
+            cursor: pointer;
+            color: var(--primary);
+            /* Color the mobile menu button */
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            margin-top: 80px;
+            /* Account for fixed header */
+            position: relative;
+            /* Ensure video and content are positioned correctly */
+        }
+
+        .hero .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hero video {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.6);
+            /* Dark overlay for text readability */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            /* Add text shadow for contrast */
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--dark);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            /* Responsive grid */
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            /* Slightly larger icons */
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background-color: var(--white);
+            /* Explicitly white */
+        }
+
+        /* --- SLIDER STYLES ADDED/MODIFIED --- */
+
+        .product-slider {
+            width: 100%; 
+            padding-bottom: 50px; /* Space for pagination */
+            padding-top: 10px;
+        }
+
+        /* .products-grid is now the .swiper-wrapper */
+        .products-grid {
+            /* These grid properties are removed/overridden by Swiper's flexbox structure */
+            /* display: grid; */
+            /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+            /* gap: 30px; */
+        }
+        
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            /* Swiper manages the width of .swiper-slide which has .product-card */
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--primary) !important;
+            /* Make arrows more visible */
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: var(--secondary) !important;
+            /* Use secondary color for active dot */
+        }
+        /* --- SLIDER STYLES END --- */
+
+
+        .product-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            height: 250px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            /* Prevent image overflow */
+        }
+
+        .product-img img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            /* Ensure image scales properly within its container */
+        }
+
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            /* Allow info to take remaining space */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .product-info p {
+            margin-bottom: 15px;
+            color: #666;
+            flex-grow: 1;
+            /* Allow description to grow */
+        }
+
+        .product-price {
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        /* Clients Section */
+        .clients {
+            padding: 60px 0;
+            background-color: var(--light);
+        }
+
+        .clients-grid {
+            display: flex;
+            justify-content: center;
+            /* Center logos */
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            /* Increase gap for better separation */
+        }
+
+        .client-logo {
+            height: 80px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            max-width: 150px;
+            /* Limit max width of logos */
+        }
+
+        .client-logo:hover,
+        .client-logo:focus {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /* Responsive grid */
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-col ul li a:hover,
+        .footer-col ul li a:focus {
+            color: var(--white);
+        }
+
+        .footer-col ul li i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 24px;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            /* For better alignment of icons */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-links a:hover,
+        .social-links a:focus {
+            color: var(--secondary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* Mobile Navigation Overlay */
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1050;
+            display: none;
+            /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow-y: auto;
+            /* Allow scrolling for long menus */
+        }
+
+        .mobile-nav-overlay.active {
+            display: flex;
+        }
+
+        .mobile-nav-overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 40px;
+            color: var(--white);
+            cursor: pointer;
+        }
+
+        .mobile-nav-overlay ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        .mobile-nav-overlay ul li {
+            margin-bottom: 20px;
+        }
+
+        .mobile-nav-overlay ul li a {
+            color: var(--white);
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 0;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-overlay ul li a:hover,
+        .mobile-nav-overlay ul li a:focus {
+            color: var(--secondary);
+        }
+
+        .mobile-nav-overlay .dropdown-menu {
+            display: none;
+            /* Changed to 'none' by default for mobile to allow toggling */
+            position: static;
+            background-color: transparent;
+            box-shadow: none;
+            min-width: unset;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .mobile-nav-overlay .dropdown-menu.show-dropdown {
+            display: block;
+            /* Show when toggled by JS */
+        }
+
+        .mobile-nav-overlay .dropdown-menu li a {
+            font-size: 22px;
+            padding: 8px 0;
+        }
+
+        .mobile-nav-overlay .dropdown-menu .dropdown-menu {
+            padding-left: 40px;
+        }
+
+
+        /* Product Detail Page */
+        .product-detail-page {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+
+        .product-detail-page .container {
+            max-width: 900px;
+        }
+
+        .product-detail-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 40px;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        @media (min-width: 768px) {
+            .product-detail-content {
+                flex-direction: row;
+            }
+        }
+
+        .product-detail-gallery {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .product-detail-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-detail-thumbnails {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+            /* For scrollbar */
+        }
+
+        .product-detail-thumbnails img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .product-detail-thumbnails img.active,
+        .product-detail-thumbnails img:hover {
+            border-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .product-detail-info {
+            flex: 1.5;
+        }
+
+        .product-detail-info h2 {
+            font-size: 32px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .product-detail-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .product-detail-info p {
+            color: var(--dark);
+            margin-bottom: 25px;
+        }
+
+        .product-detail-specs h3 {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .product-detail-specs ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .product-detail-specs ul li {
+            margin-bottom: 8px;
+            color: #555;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .product-detail-specs ul li::before {
+            content: "\f00c";
+            /* Font Awesome check-mark icon */
+            font-family: "Font Awesome 6 Free";
+            /* Updated to use FA 6 Free font-family name */
+            font-weight: 900;
+            /* Solid icon weight */
+            color: var(--secondary);
+            margin-right: 10px;
+            line-height: 1.6;
+        }
+
+        .back-to-products-btn {
+            margin-bottom: 30px;
+        }
+
+        /* General Content Page Styling */
+        .content-page {
+            padding-top: 120px;
+            /* Account for fixed header */
+            padding-bottom: 80px;
+            min-height: 80vh;
+            background-color: var(--light);
+        }
+
+        .content-page h2 {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about-content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .about-content-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .about-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Page Styling */
+        .contact-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .contact-info, .contact-form {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info h3, .contact-form h3 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: 'Open Sans', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        .contact-info ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .contact-info ul li {
+            margin-bottom: 15px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info ul li i {
+            margin-right: 15px;
+            color: var(--primary);
+            font-size: 20px;
+        }
+        
+        @media (min-width: 992px) {
+            .contact-content {
+                flex-direction: row;
+            }
+            .contact-info {
+                flex: 1;
+            }
+            .contact-form {
+                flex: 2;
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            nav {
+                display: none;
+                /* Hide desktop nav on smaller screens */
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+
+            /* .products-grid CSS removed as it's replaced by Swiper */
+
+            .footer-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .feature-icon {
+                font-size: 40px;
+            }
+
+            .logo img {
+                width: 40px;
+            }
+
+            .logo {
+                font-size: 24px;
+            }
+
+            .mobile-nav-overlay ul li a {
+                font-size: 24px;
+            }
+
+            .mobile-nav-overlay .dropdown-menu li a {
+                font-size: 18px;
+            }
+
+            .product-detail-content {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .footer-col {
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo" aria-label="DEVAM - Home">
+                <img src="assets/Devam logo 2.jpg" alt="Devam Welding Technologies Logo">
+            </a>
+            <nav id="main-nav" aria-label="Main Navigation">
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li class="has-dropdown">
+                        <a href="#products" aria-expanded="false" aria-controls="dropdown-menu-products">Products <i
+                                class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu" id="dropdown-menu-products">
+                            <li class="has-dropdown">
+                                <a href="#" aria-expanded="false" aria-controls="dropdown-menu-arc">ARC MODELS <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="dropdown-menu" id="nav-arc">
+                                    </ul>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="#" aria-expanded="false" aria-controls="dropdown-menu-mig">MIG MODELS <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="dropdown-menu" id="nav-mig">
+                                    </ul>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="#" aria-expanded="false" aria-controls="dropdown-menu-tig">TIG MODELS <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="dropdown-menu" id="nav-tig">
+                                    </ul>
+                            </li>
+                            <li class="has-dropdown">
+                                <a href="#" aria-expanded="false" aria-controls="dropdown-menu-plasma">PLASMA CUTTERS <i
+                                        class="fas fa-chevron-right"></i></a>
+                                <ul class="dropdown-menu" id="nav-plasma">
+                                    </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about-us-page">About</a></li>
+                    <li><a href="#contact-us-page">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false"
+                aria-controls="mobileNavOverlay">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="close-btn" aria-label="Close menu">
+            <i class="fas fa-times"></i>
+        </div>
+        <nav aria-label="Mobile Navigation">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="#products">Products <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="has-dropdown">
+                            <a href="#">ARC MODELS <i class="fas fa-chevron-right"></i></a>
+                            <ul class="dropdown-menu" id="mobile-nav-arc">
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">MIG MODELS <i class="fas fa-chevron-right"></i></a>
+                            <ul class="dropdown-menu" id="mobile-nav-mig">
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">TIG MODELS <i class="fas fa-chevron-right"></i></a>
+                            <ul class="dropdown-menu" id="mobile-nav-tig">
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#">PLASMA CUTTERS <i class="fas fa-chevron-right"></i></a>
+                            <ul class="dropdown-menu" id="mobile-nav-plasma">
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about-us-page">About</a></li>
+                <li><a href="#contact-us-page">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="hero" id="home">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="assets/VN20231212_212955.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="container hero-content">
+            <h1>The Power for Welding</h1>
+            <p>Manufacturer of high-quality welding machines with proven reliability, competitive pricing, and
+                exceptional service support.</p>
+            <div class="hero-btns">
+                <a href="#products" class="btn btn-primary">Explore Products</a>
+                <a href="#contact-us-page" class="btn btn-secondary">Request Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Devam?</h2>
+                <p>We combine engineering excellence with welder-friendly designs to deliver unmatched performance.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Proven Quality</h3>
+                    <p>Rigorous testing ensures our machines withstand industrial demands.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Competitive Price</h3>
+                    <p>Premium performance without premium pricing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Energy Efficient</h3>
+                    <p>Advanced inverter technology reduces power consumption.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Spares Backup</h3>
+                    <p>Quick access to genuine replacement parts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Products</h2>
+                <p>Explore our range of ARC, MIG, TIG, and Plasma Cutter welding machines.</p>
+            </div>
+            <div class="swiper-container product-slider">
+                <div class="swiper-wrapper products-grid">
+                    </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            </div>
+    </section>
+
+    <section class="content-page product-detail-page" id="product-detail">
+        <div class="container">
+            <a href="#products" class="btn btn-secondary back-to-products-btn" aria-label="Back to Products List">
+                <i class="fas fa-chevron-left"></i> Back to Products
+            </a>
+            <div class="product-detail-content">
+                <div class="product-detail-gallery">
+                    <img id="detail-product-main-img" src="" alt="Main Product Image">
+                    <div class="product-detail-thumbnails">
+                        </div>
+                </div>
+                <div class="product-detail-info">
+                    <h2 id="detail-product-name">Product Name</h2>
+                    <div class="product-detail-price" id="detail-product-price">Price: Contact for Quote</div>
+                    <p id="detail-product-description">Product description text...</p>
+                    <div class="product-detail-specs">
+                        <h3>Technical Specifications</h3>
+                        <ul>
+                            </ul>
+                    </div>
+                    <a href="#contact-us-page" class="btn btn-primary" style="margin-top: 20px;">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content-page" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We provide comprehensive support to ensure your DEVAM machine operates at peak performance.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Technical Support</h3>
+                    <p>Expert assistance for troubleshooting and operation queries.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Genuine Spares</h3>
+                    <p>Quick access to original replacement components and parts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <h3>Maintenance & Repair</h3>
+                    <p>On-site and workshop repair services by certified technicians.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-page" id="about-us-page">
+        <div class="container">
+            <div class="section-title">
+                <h2>About DEVAM</h2>
+                <p>The story behind India's trusted welding machine manufacturer.</p>
+            </div>
+            <div class="about-content-grid">
+                <div class="about-text">
+                    <h3>Our Vision</h3>
+                    <p>Since its inception, DEVAM has been driven by a singular vision: to be the **most trusted** name in
+                        welding technology, delivering machines that combine **superior performance** with **unbeatable
+                        reliability**. We cater to a diverse clientele, from small fabrication shops to heavy industrial
+                        manufacturers.</p>
+                    <h3>Engineering Excellence</h3>
+                    <p>Our machines are built on the latest **Inverter PWM technology** combined with an **Active
+                        Feedback Control System**. This ensures stable arc performance, high energy efficiency, and ease
+                        of maintenance. Every DEVAM machine undergoes rigorous testing to guarantee it meets the highest
+                        standards of industrial demand.</p>
+                    <h3>Customer Focus</h3>
+                    <p>We are not just selling welding machines; we are providing a complete solution. Our commitment
+                        extends to providing **exceptional service support** and quick access to genuine **spares
+                        backup**, minimizing downtime and maximizing your productivity.</p>
+                </div>
+                <div class="about-img">
+                    <img src="https://via.placeholder.com/600x400?text=DEVAM+Team+or+Factory"
+                        alt="DEVAM Manufacturing Facility">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-page" id="contact-us-page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>We're here to power your welding needs. Get in touch with our experts today.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Our Details</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Oppo. Water Tank, B 78, GIDC
+                            Electronic Estate, Sector 25, Gandhinagar, Gujarat 382016, India</li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a
+                                href="mailto:devamwelding1975@gmail.com">devamwelding1975@gmail.com</a></li>
+                        <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+919879098297">+91 98790
+                                98297</a></li>
+                        <li><i class="fas fa-clock" aria-hidden="true"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <h3>Send a Message</h3>
+                    <form action="#" method="POST">
+                        <input type="text" name="name" placeholder="Your Full Name" required>
+                        <input type="email" name="email" placeholder="Your Email Address" required>
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>DEVAM</h3>
+                    <p>The Power for Welding. Manufacturer of high-quality, reliable, and energy-efficient welding
+                        machines.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about-us-page">About Us</a></li>
+                        <li><a href="#contact-us-page">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Product Categories</h3>
+                    <ul>
+                        <li><a href="#" class="nav-link-anchor" data-target="nav-arc">ARC Welders</a></li>
+                        <li><a href="#" class="nav-link-anchor" data-target="nav-mig">MIG Welders</a></li>
+                        <li><a href="#" class="nav-link-anchor" data-target="nav-tig">TIG Welders</a></li>
+                        <li><a href="#" class="nav-link-anchor" data-target="nav-plasma">Plasma Cutters</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <address>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Oppo. Water Tank, B 78, GIDC
+                                Electronic Estate, Sector 25, Gandhinagar, Gujarat 382016, India</li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i> <a
+                                    href="mailto:devamwelding1975@gmail.com">devamwelding1975@gmail.com</a></li>
+                            <li><i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+919879098297">+91 98790
+                                    98297</a></li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; <span id="current-year"></span> DEVAM. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Global variable to store product data
+        let productsData = {};
+
+        // DOM elements
+        const productsSection = document.getElementById('products');
+        const productDetailSection = document.getElementById('product-detail');
+        const header = document.querySelector('header');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+        const closeBtn = document.querySelector('.mobile-nav-overlay .close-btn');
+        const backToProductsBtn = document.querySelector('.back-to-products-btn');
+
+        // Product Detail Elements
+        const detailProductName = document.getElementById('detail-product-name');
+        const detailProductPrice = document.getElementById('detail-product-price');
+        const detailProductDescription = document.getElementById('detail-product-description');
+        const detailProductMainImg = document.getElementById('detail-product-main-img');
+        const detailProductThumbnails = document.querySelector('.product-detail-thumbnails');
+        const detailProductSpecs = document.querySelector('#detail-product-specs ul');
+
+        /**
+         * Initializes the Swiper product slider.
+         */
+        function initializeSwiper() {
+            new Swiper('.product-slider', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                // Responsive breakpoints
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                }
+            });
+        }
+
+
+        /**
+         * Renders all product cards in the main product listing section (Products grid).
+         */
+        function renderProductCards() {
+            const productsGrid = document.querySelector('.products-grid');
+            if (!productsGrid) return;
+            productsGrid.innerHTML = ''; // Clear existing content
+
+            // Loop through all products in the data
+            for (const [id, product] of Object.entries(productsData)) {
+                const card = document.createElement('div');
+                // ADDED swiper-slide class
+                card.classList.add('swiper-slide', 'product-card');
+
+                // Get the first sentence of the description for the card preview
+                const shortDescription = product.description.split('.')[0].replace(/\*\*/g, '') + '...';
+                const nameWithoutDevam = product.name.replace('DEVAM ', '');
+
+                card.innerHTML = `
+                    <div class="product-img">
+                        <img src="${product.images[0]}" alt="${product.name} Welding Machine">
+                    </div>
+                    <div class="product-info">
+                        <h3>${nameWithoutDevam}</h3>
+                        <p>${shortDescription}</p>
+                        <div class="product-price">Price: Contact for Quote</div>
+                        <a href="#product-detail" class="btn btn-secondary view-details-btn" data-product-id="${id}">View Details</a>
+                    </div>
+                `;
+                productsGrid.appendChild(card);
+            }
+        }
+
+        /**
+         * Helper function to create a list item with a product link for navigation menus.
+         * @param {string} id - The product ID.
+         * @param {string} name - The product name.
+         * @returns {HTMLLIElement} The created list item element.
+         */
+        function createLinkItem(id, name) {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = '#product-detail';
+            a.textContent = name.replace('DEVAM ', '');
+            a.classList.add('product-link-nav');
+            a.setAttribute('data-product-id', id);
+            li.appendChild(a);
+            return li;
+        }
+
+        /**
+         * Renders product links into the desktop and mobile navigation dropdowns.
+         */
+        function renderNavLinks() {
+            const navTargets = {
+                desktop: {
+                    arc: document.getElementById('nav-arc'),
+                    mig: document.getElementById('nav-mig'),
+                    tig: document.getElementById('nav-tig'),
+                    plasma: document.getElementById('nav-plasma')
+                },
+                mobile: {
+                    arc: document.getElementById('mobile-nav-arc'),
+                    mig: document.getElementById('mobile-nav-mig'),
+                    tig: document.getElementById('mobile-nav-tig'),
+                    plasma: document.getElementById('mobile-nav-plasma')
+                }
+            };
+
+            for (const [id, product] of Object.entries(productsData)) {
+                let categoryKey;
+
+                if (id.startsWith('arc')) {
+                    categoryKey = 'arc';
+                } else if (id.startsWith('mig')) {
+                    categoryKey = 'mig';
+                } else if (id.startsWith('tig')) {
+                    categoryKey = 'tig';
+                } else if (id.startsWith('plasma')) {
+                    categoryKey = 'plasma';
+                } else {
+                    continue; // Skip if no category matches
+                }
+
+                // Append to desktop menu
+                if (navTargets.desktop[categoryKey]) {
+                    navTargets.desktop[categoryKey].appendChild(createLinkItem(id, product.name));
+                }
+
+                // Append to mobile menu
+                if (navTargets.mobile[categoryKey]) {
+                    navTargets.mobile[categoryKey].appendChild(createLinkItem(id, product.name));
+                }
+            }
+        }
+
+        /**
+         * Shows the product detail page for a given product ID.
+         * @param {string} productId - The ID of the product to display (key in productsData).
+         */
+        function showProductDetail(productId) {
+            const product = productsData[productId];
+            if (!product) {
+                console.error('Product not found:', productId);
+                return;
+            }
+
+            // Fill content
+            detailProductName.textContent = product.name;
+            detailProductPrice.textContent = 'Price: Contact for Quote';
+            // Use innerHTML to process the markdown/bolding in the description
+            detailProductDescription.innerHTML = product.description.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+            // Main Image
+            detailProductMainImg.src = product.images[0];
+            detailProductMainImg.alt = product.name + ' Main Image';
+
+            // Thumbnails
+            detailProductThumbnails.innerHTML = ''; // Clear previous thumbnails
+            product.images.forEach((imgSrc, index) => {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.alt = `${product.name} Thumbnail ${index + 1}`;
+                if (index === 0) {
+                    img.classList.add('active'); // Set first thumbnail as active
+                }
+                img.addEventListener('click', () => {
+                    detailProductMainImg.src = imgSrc;
+                    // Remove active class from all, add to clicked
+                    detailProductThumbnails.querySelectorAll('img').forEach(thumb => thumb.classList.remove('active'));
+                    img.classList.add('active');
+                });
+                detailProductThumbnails.appendChild(img);
+            });
+
+            // Specifications
+            detailProductSpecs.innerHTML = ''; // Clear previous specs
+            product.specs.forEach(spec => {
+                const li = document.createElement('li');
+                li.textContent = spec;
+                detailProductSpecs.appendChild(li);
+            });
+
+            // Hide new content pages if they are visible
+            document.getElementById('about-us-page').style.display = 'none';
+            document.getElementById('contact-us-page').style.display = 'none';
+            document.getElementById('services').style.display = 'none';
+
+
+            // Show product detail page and hide main products page
+            productsSection.style.display = 'none';
+            productDetailSection.style.display = 'block';
+
+            // Close mobile menu if it's open
+            if (mobileNavOverlay.classList.contains('active')) {
+                mobileNavOverlay.classList.remove('active');
+                mobileNavOverlay.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            // Scroll to the detail section
+            window.scrollTo({
+                top: productDetailSection.offsetTop - header.offsetHeight,
+                behavior: 'smooth'
+            });
+        }
+
+        /**
+         * Attaches event listeners for all product links (cards and navigation).
+         */
+        function initializeProductListeners() {
+            // Event listeners for 'View Details' buttons on product cards
+            document.querySelectorAll('.view-details-btn').forEach(button => {
+                button.removeEventListener('click', handleProductLinkClick); // Prevent double-attach
+                button.addEventListener('click', handleProductLinkClick);
+            });
+
+            // Event listeners for product links in navigation menus
+            document.querySelectorAll('.product-link-nav').forEach(link => {
+                link.removeEventListener('click', handleProductLinkClick); // Prevent double-attach
+                link.addEventListener('click', handleProductLinkClick);
+            });
+        }
+
+        /**
+         * Universal handler for product link clicks.
+         * @param {Event} e - The click event.
+         */
+        function handleProductLinkClick(e) {
+            e.preventDefault();
+            const productId = e.currentTarget.getAttribute('data-product-id');
+            showProductDetail(productId);
+        }
+
+        /**
+         * Loads product data from products.json and calls rendering functions.
+         */
+        async function loadProductData() {
+            try {
+                // Assuming products.json is in the same directory or accessible path
+                const response = await fetch('products.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                productsData = await response.json();
+
+                // RENDER DYNAMIC CONTENT
+                renderProductCards();
+                renderNavLinks();
+                initializeSwiper(); // INITIALIZE SWIPER AFTER RENDERING CARDS
+
+                // Now that data is available, initialize product-specific listeners
+                initializeProductListeners();
+            } catch (error) {
+                console.error('Could not load product data:', error);
+                // In a real application, you might show an error message on the page here
+            }
+        }
+
+        /**
+         * Generic function to hide product detail and show main content sections
+         * when navigating away from product details.
+         */
+        function resetToMainContent() {
+            productDetailSection.style.display = 'none';
+            productsSection.style.display = 'block';
+            document.getElementById('about-us-page').style.display = 'block';
+            document.getElementById('contact-us-page').style.display = 'block';
+            document.getElementById('services').style.display = 'block';
+        }
+
+        // --- General UI Logic (not product-data related) ---
+        document.addEventListener('DOMContentLoaded', function () {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Hide the product detail section on load
+            productDetailSection.style.display = 'none';
+
+            // Ensure main content sections are visible on initial load
+            document.getElementById('about-us-page').style.display = 'block';
+            document.getElementById('contact-us-page').style.display = 'block';
+            document.getElementById('services').style.display = 'block';
+
+
+            // Back to Products button logic
+            backToProductsBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // Ensure new content pages are visible when returning to the main scroll view
+                resetToMainContent();
+
+                // Scroll back to the products section
+                window.scrollTo({
+                    top: productsSection.offsetTop - header.offsetHeight,
+                    behavior: 'smooth'
+                });
+            });
+
+            // Mobile Menu Toggle
+            mobileMenuBtn.addEventListener('click', function () {
+                mobileNavOverlay.classList.add('active');
+                mobileNavOverlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling body when menu is open
+            });
+
+            // Close mobile menu
+            closeBtn.addEventListener('click', function () {
+                mobileNavOverlay.classList.remove('active');
+                mobileNavOverlay.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            });
+
+            // Handle smooth scrolling and state management for main nav links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    const targetElement = document.querySelector(href);
+
+                    if (targetElement) {
+                        e.preventDefault(); // Prevent default browser jump
+
+                        // If navigating away from the detail page, show the main content sections
+                        if (productDetailSection.style.display !== 'none') {
+                            // Ensure the main sections are visible before scrolling to one of them
+                            resetToMainContent();
+                        }
+
+                        const offset = header.offsetHeight; // Account for fixed header height
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementRect = targetElement.getBoundingClientRect().top;
+                        const elementPosition = elementRect - bodyRect;
+                        const offsetPosition = elementPosition - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+
+                        // Close mobile menu on click
+                        if (mobileNavOverlay.classList.contains('active')) {
+                            mobileNavOverlay.classList.remove('active');
+                            mobileNavOverlay.setAttribute('aria-hidden', 'true');
+                            document.body.style.overflow = '';
+                        }
+                    }
+                });
+            });
+
+            /**
+             * Handles keyboard and click events for nested dropdown menus.
+             * @param {NodeList} dropdowns - List of parent <li> elements with the 'has-dropdown' class.
+             */
+            function handleDropdowns(dropdowns) {
+                dropdowns.forEach(li => {
+                    const dropdownToggle = li.querySelector('a');
+                    const dropdownMenu = li.querySelector('.dropdown-menu');
+
+                    if (dropdownToggle && dropdownMenu) {
+                        // Handle click to open/close mobile menus
+                        if (li.closest('.mobile-nav-overlay')) {
+                            dropdownToggle.addEventListener('click', function (e) {
+                                // Only prevent default if the link doesn't navigate directly
+                                if (dropdownToggle.getAttribute('href') === '#') {
+                                    e.preventDefault();
+                                }
+                                // Toggle visibility only if it's a dropdown link
+                                if (dropdownMenu) {
+                                    dropdownMenu.classList.toggle('show-dropdown');
+                                    const isExpanded = dropdownMenu.classList.contains('show-dropdown');
+                                    dropdownToggle.setAttribute('aria-expanded', isExpanded);
+                                }
+                            });
+                        }
+
+
+                        // Handle keyboard events (desktop and mobile)
+                        dropdownToggle.addEventListener('keydown', function (e) {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                                // For desktop, allow default behavior if link is not '#'
+                                if (!li.closest('.mobile-nav-overlay') && dropdownToggle.getAttribute('href') !== '#') {
+                                    return;
+                                }
+                                e.preventDefault();
+                                dropdownMenu.classList.toggle('show-dropdown');
+                                dropdownToggle.setAttribute('aria-expanded', dropdownMenu.classList.contains('show-dropdown'));
+                            } else if (e.key === 'Escape') {
+                                dropdownMenu.classList.remove('show-dropdown');
+                                dropdownToggle.setAttribute('aria-expanded', 'false');
+                                dropdownToggle.focus();
+                            }
+                        });
+
+                        dropdownMenu.querySelectorAll('a').forEach(link => {
+                            link.addEventListener('keydown', function (e) {
+                                if (e.key === 'Escape') {
+                                    dropdownMenu.classList.remove('show-dropdown');
+                                    dropdownToggle.setAttribute('aria-expanded', 'false');
+                                    dropdownToggle.focus();
+                                }
+                            });
+                        });
+                    }
+                });
+            }
+
+            // Apply dropdown handling to both desktop and mobile navigation
+            handleDropdowns(document.querySelectorAll('#main-nav .has-dropdown'));
+            handleDropdowns(document.querySelectorAll('#mobileNavOverlay .has-dropdown'));
+            
+            // --- START THE PROCESS: Load data and then attach listeners ---
+            loadProductData();
+        });
+    </script>
+</body>
+
+</html>

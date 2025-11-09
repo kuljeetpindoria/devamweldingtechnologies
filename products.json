@@ -1,0 +1,305 @@
+{
+  "arc615d": {
+    "name": "DEVAM ARC 615 D",
+    "description": "Perfectly suitable for **heavy metal fabrication** (continuous use of 3.15 mm, 4 mm, 5 mm welding electrodes, including hardfacing electrodes). PWM technology-based machine with **heavy double module system for easy maintenance**. Summing amplifier control with **active feedback system** for easy arc initiation and welding arc stability. Long performance life and **high power factor** for reduced electricity cost.",
+    "images": [
+      "assets/ARC 415D CATALOGUES 3.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+615+D+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+615+D+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Above 70V DC",
+      "Rated Output Current: 600 AMPS",
+      "Rated Output Current Range: 40-600 AMPS",
+      "Rated Output Voltage Range: 21V – 45V",
+      "Weight: 35 KGS APPROX",
+      "Dimensions: 640 * 380 * 590 MM"
+    ]
+  },
+  "arc415d": {
+    "name": "DEVAM ARC 415 D",
+    "description": "Perfectly suitable for **heavy metal fabrication** (continuous use of 3.15 mm, 4 mm welding electrodes, including hardfacing electrodes). PWM technology-based machine with **heavy module system for easy maintenance**. Summing amplifier control with **active feedback system** for easy arc initiation and welding arc stability. Long performance life and **high power factor** for reduced electricity cost.",
+    "images": [
+      "assets/ARC 415D CATALOGUES 3.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+415+D+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+415+D+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Above 70V DC",
+      "Rated Output Current: 400 AMPS",
+      "Rated Output Current Range: 40-400 AMPS",
+      "Rated Output Voltage Range: 18V – 39V",
+      "Weight: 24 KGS APPROX",
+      "Dimensions: 550 * 280 * 430 MM"
+    ]
+  },
+  "arc400": {
+    "name": "DEVAM ARC 400",
+    "description": "Perfectly suitable for **metal fabrication** (continuous use of 3.15 mm, 4 mm welding electrodes, including hardfacing electrodes). PWM technology-based machine with **dual module system for easy maintenance**. Summing amplifier control with **active feedback system** for easy arc initiation and welding arc stability. Long performance life and **high power factor** for reduced electricity cost.",
+    "images": [
+      "assets/ARC 415D CATALOGUES 3.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+400+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+400+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Current: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Above 70V DC",
+      "Rated Output Current: 400 AMPS",
+      "Rated Output Current Range: 30 – 400 AMPS",
+      "Rated Output Voltage Range: 18V – 39 V",
+      "Weight: 15 KGS APPROX",
+      "Dimensions: 450 * 220 * 343 MM"
+    ]
+  },
+  "arc230a300": {
+    "name": "DEVAM ARC 230A/300",
+    "description": "Advanced **microcontroller based machine** for enhanced performance. Operation in both **single & two phase with auto detection circuit**. Suitable for **continuous use of 3.15 mm electrode & intermittent 4 mm electrode**. Special functions: **Anti – Stick, VRD, Lift TIG, Digital Display with Active Feedback System**.",
+    "images": [
+      "assets/ARC 415D CATALOGUES 3.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+230A/300+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+230A/300+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: AC 220V & AC 415V (1/2 PHASE machine)",
+      "Open Circuit Voltage: Above 70V DC",
+      "Rated Output Current: 230 AMPS",
+      "Rated Output Voltage: 29 V",
+      "Weight: 8.5 KGS APPROX",
+      "Dimensions: 400 * 195 * 270 MM"
+    ]
+  },
+  "arc250industrial": {
+    "name": "DEVAM ARC 250 INDUSTRIAL",
+    "description": "Inverter **PWM technology based** welding machine suitable for use of **2.54 mm & 3.15 mm welding electrodes**. PWM technology-based welding machines for easy maintenance. **Reliable Active Feedback Control System** for stable welding arc. Long performance life with ergonomic look and **high power factor** for reduced electricity cost.",
+    "images": [
+      "assets/ARC 415D CATALOGUES 3.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+250+INDUSTRIAL+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+250+INDUSTRIAL+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 220 V AC",
+      "Open Circuit Voltage: Around 60 V DC",
+      "Rated Output Current: 250 AMPS",
+      "Rated Output Current Range: 30 – 250 AMPS",
+      "Rated Output Voltage Range: 20 – 32 V",
+      "Weight: 6 KGS APPROX",
+      "Dimensions: 370 * 190 * 260 MM"
+    ]
+  },
+  "arc200": {
+    "name": "DEVAM ARC 200",
+    "description": "Inverter **PWM technology based most basic model** suitable for **light fabrication & running use**. Can be used with **2.54 mm & 3.15 mm welding electrodes**. **Reliable Active Feedback Control System** for stable welding arc. **High power factor** for reduced electricity cost.",
+    "images": [
+      "assets/ARC 415D CATALOGUES 3.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+200+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+ARC+200+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 220 V AC",
+      "Open Circuit Voltage: Around 70V DC",
+      "Rated Output Current: 200 AMPS",
+      "Rated Output Current Range 30 – 200 AMPS",
+      "Rated Output Voltage Range: 20 – 30 V",
+      "Weight: 5.5 KGS APPROX"
+    ]
+  },
+  "mig615d": {
+    "name": "DEVAM MIG 615 D",
+    "description": "**MIG/ARC Dual Mode** & suitable for **heavy metal fabrication** (continuous use of 1.2 mm / 1.6 mm wire & 3.15 mm, 4 mm, 5 mm welding electrode). Latest **PWM technology** with maintenance friendly design. **Active Feedback Control System** for outstanding durable performance. **Thermal Overload Protection** and **Voltage Control** for fine tuning arc characteristics.",
+    "images": [
+      "assets/IMG20240501164909.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+615+D+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+615+D+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Around 70 VDC",
+      "Rated Output Current: 600 AMPS",
+      "Rated Output Current Range: 60-600 AMPS",
+      "Rated Output Voltage Range: 17V – 50V",
+      "Weight: 50 KGS APPROX",
+      "Dimensions: 641 * 380 * 590 MM"
+    ]
+  },
+  "mig450500": {
+    "name": "DEVAM MIG 450/500",
+    "description": "**MIG/ARC Dual Mode** & suitable for **heavy metal fabrication** (continuous use of 0.8 mm / 1.0 mm / 1.2 mm wire & 3.15 mm & 4 mm welding electrode). Latest **PWM technology** with maintenance friendly design. **Active Feedback Control System** for outstanding durable performance. **Thermal Overload Protection** and **Voltage Control** for fine tuning arc characteristics.",
+    "images": [
+      "assets/IMG20240501164909.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+450/500+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+450/500+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Around 72V DC",
+      "Rated Output Current: 450 AMPS",
+      "Rated Output Current Range: 40-450 AMPS",
+      "Rated Output Voltage Range: 21.6V – 36.5V",
+      "Weight: 35 KGS APPROX",
+      "Dimensions: 570 * 330 * 460 MM"
+    ]
+  },
+  "mig415d": {
+    "name": "DEVAM MIG 415 D",
+    "description": "**MIG/ARC Dual Mode** & suitable for **heavy metal fabrication** (continuous use of 1.2 mm wire & 4 mm welding electrode). Latest **PWM technology** with maintenance friendly design. **Active Feedback Control System** for outstanding durable performance. **Thermal Overload Protection** and **Voltage Control** for fine tuning arc characteristics.",
+    "images": [
+      "assets/IMG20240501164909.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+415+D+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+415+D+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Current: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Around 60V DC",
+      "Rated Output Current: 400 AMPS",
+      "Rated Output Current Range: 30 – 400 AMPS",
+      "Rated Output Voltage Range: 16.5V – 34 V",
+      "Weight: 35 KGS APPROX",
+      "Dimensions: 550 * 280 * 430 MM"
+    ]
+  },
+  "mig400": {
+    "name": "DEVAM MIG 400",
+    "description": "**Wire Speed Control** for maintaining arc stability and weld quality. Wire size used: **0.8 / 1.0 / 1.2 MM**. **Voltage Control** for fine tuning arc characteristics. **Thermal Overload Protection** and **Active Feedback Control System**.",
+    "images": [
+      "assets/IMG20240501164909.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+400+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+400+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Around 60V DC",
+      "Rated Output Current: 400 AMPS",
+      "Rated Output Current Range: 30-400 AMPS",
+      "Rated Output Voltage Range: 16V – 34 V DC",
+      "Weight: 30 KGS APPROX",
+      "Dimensions: 550 * 280 * 430 MM"
+    ]
+  },
+  "mig250industrial": {
+    "name": "DEVAM MIG 250 INDUSTRIAL",
+    "description": "Inverter **PWM technology based** welding machine suitable for **0.8 mm / 1.0 mm solidwire & fluxwire**. Can be used in **ARC mode with 2.54 mm / 3.15 mm welding electrodes**. **Precise Wire Feed Speed Control** and **Voltage Control**. **Thermal Overload Protection**.",
+    "images": [
+      "assets/IMG20240501164909.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+250+INDUSTRIAL+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+250+INDUSTRIAL+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Around 50 V DC",
+      "Rated Output Current: 250 AMPS",
+      "Rated Output Current Range: 30 – 250 AMPS",
+      "Rated Output Voltage Range: 19 – 28 V",
+      "Weight: 18 KGS APPROX",
+      "Dimensions: 480 * 205 * 300 MM"
+    ]
+  },
+  "mig200": {
+    "name": "DEVAM MIG 200",
+    "description": "Inverter **PWM technology based most basic MIG welding model** suitable for **light fabrication & running use**. Can be used with **0.8 MM solidwire & fluxwire**. Supports **MIG / ARC function**. **Reliable Active Feedback Control System** and **fine speed control**. **High power factor**.",
+    "images": [
+      "assets/IMG20240501164909.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+200+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+MIG+200+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 220 V AC",
+      "Open Circuit Voltage: Around 52",
+      "Rated Output Current: 200 AMPS",
+      "Rated Output Current Range: 30 – 200 AMPS",
+      "Rated Output Voltage Range: 15 – 24 V",
+      "Weight: 11.5 KGS APPROX"
+    ]
+  },
+  "tig615d": {
+    "name": "DEVAM TIG 615 D",
+    "description": "**High Frequency (HF) Start** based **PWM technology TIG / ARC Dual Machine** for non-contact arc initiation. **Active Feedback Control System** and **Reliable Design & Easy Maintenance**. **Thermal Management** system. Suitable for **2.4 mm & 3 mm Tungsten in TIG mode** & **2.54 mm & 3.15 mm electrode in ARC mode**. Long performance life and **high power factor**.",
+    "images": [
+      "assets/CATALOGUE TIG 415 D LAUGHTER.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+TIG+615+D+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+TIG+615+D+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Around 70V DC",
+      "Rated Output Current: 600 AMPS",
+      "Rated Output Current Range: 20-600 AMPS",
+      "Rated Output Voltage Range: 10V – 35V",
+      "Weight: 40 KGS APPROX",
+      "Dimensions: 640 * 380 * 590 MM"
+    ]
+  },
+  "tig415d": {
+    "name": "DEVAM TIG 415 D",
+    "description": "**High Frequency (HF) Start** based **PWM technology TIG / ARC Dual Machine** for non-contact arc initiation. **Active Feedback Control System** and **Reliable Design & Easy Maintenance**. **Thermal Management** system. Suitable for **2.4 mm & 3 mm Tungsten in TIG mode** & **2.54 mm & 3.15 mm electrode in ARC mode**. Long performance life and **high power factor**.",
+    "images": [
+      "assets/CATALOGUE TIG 415 D LAUGHTER.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+TIG+415+D+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+TIG+415+D+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Around 70V DC",
+      "Rated Output Current: 400 AMPS",
+      "Rated Output Current Range: 20-400 AMPS",
+      "Rated Output Voltage Range: 10V – 26V",
+      "Weight: 25 KGS APPROX",
+      "Dimensions: 550 * 280 * 430 MM"
+    ]
+  },
+  "tig315d": {
+    "name": "DEVAM TIG 315D",
+    "description": "**High Frequency (HF) Start** based **PWM technology TIG / ARC Dual Machine** for non-contact arc initiation, prevents tungsten contamination, and improves arc control. **Active Feedback Control System** and **Reliable Design & Easy Maintenance**. **Thermal Management** system. **60% Duty Cycle** machine. Suitable for **2.4 mm & 3 mm Tungsten in TIG mode** & **2.54 mm & 3.15 mm electrode in ARC mode**.",
+    "images": [
+      "assets/CATALOGUE TIG 415 D LAUGHTER.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+TIG+315D+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+TIG+315D+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Current: 415V AC +- 10% (3 PHASE)",
+      "Open Circuit Voltage: Around 60V DC",
+      "Rated Output Current: 300 AMPS",
+      "Rated Output Current Range: 15 – 300 AMPS",
+      "Rated Output Voltage Range: 10.5V – 19 V",
+      "Weight: 16 KGS APPROX",
+      "Dimensions: 480 * 205 * 300 MM"
+    ]
+  },
+  "tig200heavyduty": {
+    "name": "DEVAM TIG 200 HEAVY DUTY",
+    "description": "**High Frequency (HF) Start** based **PWM technology TIG / ARC Dual Machine** for non-contact arc initiation, prevents tungsten contamination, and improves arc control. **Active Feedback Control System** and **Reliable Design & Easy Maintenance**. **Thermal Management** system. **100% Duty Cycle** machine.",
+    "images": [
+      "assets/CATALOGUE TIG 415 D LAUGHTER.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+TIG+200+HEAVY+DUTY+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+TIG+200+HEAVY+DUTY+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 220 V +- 15% AC (SINGLE PHASE)",
+      "Open Circuit Voltage: Around 60V DC",
+      "Rated Output Current: 200 AMPS",
+      "Rated Output Current Range: 10 - 200 AMPS",
+      "Rated Output Voltage: 18 V",
+      "Weight: 6.5 KGS APPROX",
+      "Dimensions: 356 * 153 * 225 MM"
+    ]
+  },
+  "tig200": {
+    "name": "DEVAM TIG 200",
+    "description": "Industrial grade TIG welding machine specially designed for **stainless steel sheet metal fabrication**. **High Frequency (HF) Start** based **PWM technology TIG / ARC Dual Machine** for non-contact arc initiation, prevents tungsten contamination, and improves arc control. **Active Feedback Control System** and **Reliable Design & Easy Maintenance**. **Thermal Management** system. **60% Duty Cycle** machine.",
+    "images": [
+      "assets/CATALOGUE TIG 415 D LAUGHTER.jpg",
+      "https://via.placeholder.com/600x400?text=DEVAM+TIG+200+Detail+1",
+      "https://via.placeholder.com/600x400?text=DEVAM+TIG+200+Detail+2"
+    ],
+    "specs": [
+      "Rated Input Voltage: 220 V +- 15% AC (SINGLE PHASE)",
+      "Open Circuit Voltage: Around 60 V DC",
+      "Rated Output Current: 200 AMPS",
+      "Rated Output Current Range: 10 – 200 AMPS",
+      "Rated Output Voltage: 16.4 V",
+      "Weight: 6 KGS APPROX",
+      "Dimensions: 356 * 153 * 225 MM"
+    ]
+  }
+}
